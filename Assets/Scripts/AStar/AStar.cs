@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 namespace PathFinding
 {
-	//probando algo 
 	/// <summary>
 	/// Algorithm based on WikiPedia: http://en.wikipedia.org/wiki/A*_search_algorithm
 	/// Implements the static GetPath(...) function that will return a IList of IAStarNodes that is the shortest path
