@@ -6,8 +6,8 @@ public class TileGenerator : MonoBehaviour
 {
     public GameObject hexTilePrefab;
 
-    int mapWidht = 15;
-    int mapHeight = 7;
+    int mapWidht = 8;
+    int mapHeight = 8;
 
     public float tileXOffset = 1.8f;
     public float tileZOffset = 1.45f;
