@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class TileGenerator : MonoBehaviour
 {
-    public GameObject hexTilePrefab;
+
+   
 
     int mapWidht = 8;
     int mapHeight = 8;
@@ -19,11 +20,13 @@ public class TileGenerator : MonoBehaviour
 
     void CreateHexTileMap()
     {
+        var hexagonosLista = Resources.LoadAll<GameObject>("Prefabs");
+
         for (int x = 0; x < mapWidht ; x++)
         {
             for (int z = 0; z < mapHeight; z++)
             {
-                GameObject TempGo = Instantiate(hexTilePrefab);
+                GameObject TempGo = Instantiate(hexagonosLista[Random.Range(0, hexagonosLista.Length)]);
 
                 if(z % 2 == 0)
                 {
