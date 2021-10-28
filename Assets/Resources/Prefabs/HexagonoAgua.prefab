@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 995964148017501006}
   - component: {fileID: 4214731022930320619}
   - component: {fileID: 2132820290609375265}
+  - component: {fileID: -3227197542329132920}
   m_Layer: 0
   m_Name: HexagonoAgua
   m_TagString: Untagged
@@ -81,3 +82,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-3227197542329132920
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475605510879169012}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2190622540023885545, guid: 07f0fa705ae5b4dc0a9b8305b997f9f9, type: 3}
