@@ -9,6 +9,7 @@ public class TileGenerator : MonoBehaviour
 
     int mapWidht = 8;
     int mapHeight = 8;
+    public Nodo[] misNodos;
 
     public float tileXOffset = 1.8f;
     public float tileZOffset = 1.45f;
@@ -37,5 +38,8 @@ public class TileGenerator : MonoBehaviour
                 }
             }
         }
+
+        misNodos = GameObject.FindObjectsOfType<Nodo>();
+
     }
 }
