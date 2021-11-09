@@ -7,6 +7,13 @@ public class Nodo : MonoBehaviour, IAStarNode
 {
     public int Costo;
     public List<Nodo> Vecinos = new List<Nodo>();
+    
+
+    //TODO: Agregar nodos a la lista "Vecinos".
+    void EncontrarVecinos()
+    {   
+        
+    }
 
     public IEnumerable<IAStarNode> Neighbours => Vecinos;
 
