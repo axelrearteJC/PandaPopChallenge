@@ -10,16 +10,15 @@ public class Nodo : MonoBehaviour, IAStarNode
     
 
     //TODO: Agregar nodos a la lista "Vecinos".
-    void EncontrarVecinos()
-    {   
-        
-    }
+   
+
 
     public IEnumerable<IAStarNode> Neighbours => Vecinos;
 
     public float CostTo(IAStarNode neighbour)
     {
-        //Costo
+
+        //Calculo el costo
         throw new System.NotImplementedException();
     }
 
@@ -38,6 +37,7 @@ public class Nodo : MonoBehaviour, IAStarNode
     // Update is called once per frame
     void Update()
     {
+        //EncontrarVecinos();
         
     }
 }

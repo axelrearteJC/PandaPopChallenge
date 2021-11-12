@@ -18,7 +18,6 @@ public class TileGenerator : MonoBehaviour
     {
         CreateHexTileMap();
         FindNeighbors();
-       
     }
 
     void CreateHexTileMap()
@@ -45,34 +44,26 @@ public class TileGenerator : MonoBehaviour
 
     }
     //Algoritmo para agregar objetos a la lista "Vecinos"
-    //TODO : Crear una funcion donde me encuentre objetos un al lado del otro
-    void FindNeighbors()
+    
+    public void FindNeighbors()
     {
-        for (int i = 0; i < misNodos.Length - 1; i++)
+        for (int i = 0; i < misNodos.Length; i++)
         {
             float distancia;
-            for (int w = 0; w < misNodos.Length -1 ; w++)
+            for (int w = 0; w < misNodos.Length; w++)
             {
                 distancia = Vector3.Distance(misNodos[i].transform.position, misNodos[w].transform.position);
-                Debug.Log($"La distancia es {distancia} en el nodo {i} {misNodos[i]} y en el nodo {w} {misNodos[w]}");
+                //Debug.Log($"La distancia es {distancia} en el nodo {i} {misNodos[i]} y en el nodo {w} {misNodos[w]}");
+              
+
                 if (distancia < 1.5)
                 {
                     misNodos[i].GetComponent<Nodo>().Vecinos.Add(misNodos[w]);
+                    Debug.Log($"Se agrego el nodo{misNodos[w]} el numero es w {w} e i es {i}");
                 }
             }
-            /*
-            if (misNodos[i].transform.position != misNodos[i+1].transform.position)
-            {
-                Vector3 asigno = misNodos[i].transform.position;
-                Vector3 asigno2 = misNodos[i + 1].transform.position;
-                if (Vector3.Distance(asigno,asigno2) < 2)
-                {
-                    misNodos[i].GetComponent<Nodo>().Vecinos.AddRange(misNodos);
-                    Debug.Log($"La distancia es {Vector3.Distance(asigno, asigno2)}");
-                }
-            }
-            */
             
         }
     }
+    
 }

@@ -33,17 +33,15 @@ public class MouseDetect : MonoBehaviour
         if (Input.GetMouseButton(0))
         {
 
-            Debug.Log("Mouse Position: " + Input.mousePosition);
+           // Debug.Log("Mouse Position: " + Input.mousePosition);
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
             if (Physics.Raycast(ray))
             {
-                Debug.Log("Estoy tocando un hexagono y esta es la variable"  + ray);
+                //Debug.Log("Estoy tocando un hexagono y esta es la variable"  + ray);
                
             };
-        }
-
-        
+        }        
        
     }
 }
