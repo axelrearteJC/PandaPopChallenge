@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class TileGenerator : MonoBehaviour
 {
-
-   
-
     int mapWidht = 8;
     int mapHeight = 8;
     public Nodo[] misNodos;
@@ -43,6 +40,7 @@ public class TileGenerator : MonoBehaviour
         misNodos = GameObject.FindObjectsOfType<Nodo>();
 
     }
+
     //Algoritmo para agregar objetos a la lista "Vecinos"
     
     public void FindNeighbors()
@@ -53,13 +51,10 @@ public class TileGenerator : MonoBehaviour
             for (int w = 0; w < misNodos.Length; w++)
             {
                 distancia = Vector3.Distance(misNodos[i].transform.position, misNodos[w].transform.position);
-                //Debug.Log($"La distancia es {distancia} en el nodo {i} {misNodos[i]} y en el nodo {w} {misNodos[w]}");
-              
-
-                if (distancia < 1.5)
+                if (distancia < 1.5 && distancia != 0)
                 {
                     misNodos[i].GetComponent<Nodo>().Vecinos.Add(misNodos[w]);
-                    Debug.Log($"Se agrego el nodo{misNodos[w]} el numero es w {w} e i es {i}");
+                    
                 }
             }
             

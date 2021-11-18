@@ -18,6 +18,7 @@ public class MouseDetect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if(buscarCamino)
         {
             buscarCamino = false;
@@ -26,7 +27,7 @@ public class MouseDetect : MonoBehaviour
             var camino = AStar.GetPath(nodoInicio, nodoFin);
             for (int i = 0; i < camino.Count; i++)
             {
-              Debug.Log(camino[i]);
+                Debug.Log($"El camino es {camino[i]} en {i}");
             }
         }
 
@@ -38,8 +39,7 @@ public class MouseDetect : MonoBehaviour
 
             if (Physics.Raycast(ray))
             {
-                //Debug.Log("Estoy tocando un hexagono y esta es la variable"  + ray);
-               
+                Debug.Log("Estoy tocando un hexagono y esta es la variable"  + ray);
             };
         }        
        

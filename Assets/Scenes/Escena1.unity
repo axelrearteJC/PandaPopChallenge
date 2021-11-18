@@ -394,6 +394,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7d9437da2ec24792883188e5900129d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  misNodos: []
   tileXOffset: 1.1
   tileZOffset: 0.8
 --- !u!4 &2089884957
@@ -417,6 +418,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9152758597918870076, guid: face49f5aa9b04e9780dc3d69d606f33, type: 3}
+      propertyPath: buscarCamino
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9152758597918870077, guid: face49f5aa9b04e9780dc3d69d606f33, type: 3}
       propertyPath: m_Name
       value: MouseDetect
