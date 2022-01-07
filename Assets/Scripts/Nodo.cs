@@ -7,14 +7,13 @@ public class Nodo : MonoBehaviour, IAStarNode
 {
     public int Costo;
     public List<Nodo> Vecinos = new List<Nodo>();
-    
-
-    //TODO: Agregar nodos a la lista "Vecinos".
-   
+    public int CoordenadaX;
+    public int CoordenadaY;
+       
 
 
     public IEnumerable<IAStarNode> Neighbours => Vecinos;
-
+    
     public float CostTo(IAStarNode neighbour)
     {
         //Lo llama el getPath
@@ -23,15 +22,31 @@ public class Nodo : MonoBehaviour, IAStarNode
         //TODO : Con esta funcion tengo que devolver el costo de un nodo hasta "IAStarNode"
         //TODO : Cuanto le cuesta de ir desde un lugar a otro? Alrededor del "Cost"
 
-        throw new System.NotImplementedException();
+       
+        Nodo nodoVecino = (Nodo)neighbour;
+
+
+        return nodoVecino.Costo;
+
+
+        //Me tiene que devolver un float
+
+        //Debug.Log("Valor es " + algo);
+
     }
+
+   
 
     public float EstimatedCostTo(IAStarNode target)
     {
         //Costo estimado
         //Llamar nodo inicial y final
         //Retorna un numero
-        throw new System.NotImplementedException();
+
+        Nodo nodoTarget = (Nodo)target;
+
+        return 0;
+        
     }
 
     // Start is called before the first frame update

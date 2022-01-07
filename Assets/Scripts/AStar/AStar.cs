@@ -49,15 +49,15 @@ namespace PathFinding
 			fScore		= new Dictionary<IAStarNode, float>();
 		}
 
-		/// <summary>
-		/// This method is the C# implementation of the algorithm presented on the wikipedia page
-		/// start and goal are the nodes in the graph we should find a path for.
-		/// Returns null if no path is found.
-		///
-		/// This function is NOT thread-safe (due to using static data for GC optimization)
-		/// </summary>
-		public static IList<IAStarNode> GetPath(IAStarNode start, IAStarNode goal) 
-		{
+        /// <summary>
+        /// This method is the C# implementation of the algorithm presented on the wikipedia page
+        /// start and goal are the nodes in the graph we should find a path for.
+        /// Returns null if no path is found.
+        ///
+        /// This function is NOT thread-safe (due to using static data for GC optimization)
+        /// </summary>
+        public static IList<IAStarNode> GetPath(IAStarNode start, IAStarNode goal)
+        {
 			if (start == null || goal == null)
 			{
 				return null;

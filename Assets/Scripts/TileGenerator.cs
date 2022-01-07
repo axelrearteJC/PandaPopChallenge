@@ -16,7 +16,7 @@ public class TileGenerator : MonoBehaviour
         CreateHexTileMap();
         FindNeighbors();
     }
-
+    //TODO : Acceder al objeto nodo que se instancia TempoGo y luego hay que setearle un valor de CoordenadaX y CoordenadaY(seria Z)
     void CreateHexTileMap()
     {
         var hexagonosLista = Resources.LoadAll<GameObject>("Prefabs");

@@ -7,7 +7,8 @@ public class MouseDetect : MonoBehaviour
 {
     public Nodo nodoInicio;
     public Nodo nodoFin;
-    public bool buscarCamino; 
+    public bool buscarCamino;
+    public float costoTotal;
     
     // Start is called before the first frame update
     void Start()
