@@ -21,6 +21,7 @@ public class TileGenerator : MonoBehaviour
     {
         var hexagonosLista = Resources.LoadAll<GameObject>("Prefabs");
 
+   
         for (int x = 0; x < mapWidht ; x++)
         {
             for (int z = 0; z < mapHeight; z++)
@@ -30,10 +31,16 @@ public class TileGenerator : MonoBehaviour
                 if(z % 2 == 0)
                 {
                     TempGo.transform.position = new Vector3(x * tileXOffset, 0, z * tileZOffset);
-                }else
+                }
+                else
                 {
                     TempGo.transform.position = new Vector3(x * tileXOffset + tileXOffset / 2, 0, z * tileZOffset);
+                    
                 }
+
+                var CoordenadaTileX = TempGo.transform.position.x;
+                var CoordenadaTileZ = TempGo.transform.position.z;
+
             }
         }
 

@@ -18,13 +18,8 @@ public class Nodo : MonoBehaviour, IAStarNode
     {
         //Lo llama el getPath
         //Llamar nodo inicial y final
-        //Calculo el costo
-        //TODO : Con esta funcion tengo que devolver el costo de un nodo hasta "IAStarNode"
-        //TODO : Cuanto le cuesta de ir desde un lugar a otro? Alrededor del "Cost"
-
-       
+        //Casteo
         Nodo nodoVecino = (Nodo)neighbour;
-
 
         return nodoVecino.Costo;
 
